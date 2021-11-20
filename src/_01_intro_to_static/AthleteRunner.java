@@ -7,7 +7,7 @@ public class AthleteRunner {
     Athlete joe = new Athlete("Joe",35);
     
     System.out.println(jim.name);
-    system.out.println(jim.speed);
+    system.out.println(joe.name);
     
     // good.  i think the class you named 'Java.java' should be 'Athlete.java'....or maybe Java.java is a junk file??
     // it was just  a typo

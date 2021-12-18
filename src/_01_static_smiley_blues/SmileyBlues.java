@@ -1,5 +1,8 @@
 package _01_static_smiley_blues;
 
+ import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 public class SmileyBlues {
 	void start() {
 		// 1. Make a new JFrame and set it to be visible

@@ -7,16 +7,17 @@ public class AthleteRunner {
     Athlete joe = new Athlete("Joe",35);
     
     System.out.println(jim.name);
-    system.out.println(joe.name);
-    
-    // good.  i think the class you named 'Java.java' should be 'Athlete.java'....or maybe Java.java is a junk file??
-    // it was just  a typo
-    
-    // I have a question for you - does the computer you are 
-		//sing have a touch screen?
-    //um well it does but i dont think effects the keyboard on the screen?  i
-	} // think maybe that's why the soft keyboard on this dvc keeps popping up.
-	// can i look at one thing to see if i can disable that?  yes or no?  -su
-	// hmm it says screen keybd is off!! go figure.  ok keep working.  any questions?
-
+  System.out.println(jim.speed);
+    System.out.println(joe.name);
+  System.out.println(joe.speed);
+  System.out.println("9:00 AM");
+  System.out.println("New York");
+  
+ 
+  
+  
+  
+  System.out.println(jim.bibNumber);
+  System.out.println(joe.bibNumber);
+	}
 }

@@ -3,7 +3,7 @@ package _01_intro_to_static;
 public class AthleteRunner {
 	
 	public static  void main(String[] args) {
-    Athlete jim = new Athlete("Jim",5);
+    Athlete jim = new Athlete("Jim",10);
     Athlete joe = new Athlete("Joe",35);
     
     System.out.println(jim.name);

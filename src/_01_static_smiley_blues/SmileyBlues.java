@@ -24,7 +24,7 @@ public class SmileyBlues {
 		// 5. Make three Smiley objects and add them to your panel
 		Smiley smiley1 = new Smiley();
 		Smiley smiley2 = new Smiley(); 
-		Smiley smiley3 = new Smiley();
+		Smiley smiley4 = new Smiley();
 // need help? 
 		// 6. Pack your frame
 

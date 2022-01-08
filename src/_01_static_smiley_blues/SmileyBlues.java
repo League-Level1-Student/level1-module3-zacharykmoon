@@ -8,7 +8,8 @@ public class SmileyBlues {
 		// 1. Make a new JFrame and set it to be visible
 		JFrame window = new JFrame();
 		// 2. Set your frame's default close operation to JFrame.EXIT_ON_CLOSE
-		
+		window.setVisible(true);
+
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// 3. Make a new JPanel
@@ -24,10 +25,12 @@ public class SmileyBlues {
 		// 5. Make three Smiley objects and add them to your panel
 		Smiley smiley1 = new Smiley();
 		Smiley smiley2 = new Smiley(); 
-		Smiley smiley4 = new Smiley();
+		Smiley smiley3 = new Smiley();
 // need help? 
 		// 6. Pack your frame
-
+		// i think you also need to make the
+		// frame visible: 
+ 
 		// 7. RUN THE PROGRAM and make sure you see three blue Smileys!
 	}
 }

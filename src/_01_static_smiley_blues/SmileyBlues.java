@@ -30,7 +30,11 @@ public class SmileyBlues {
 		// 6. Pack your frame
 		// i think you also need to make the
 		// frame visible: 
+		slime.add(smiley1);
+		slime.add(smiley2);
+		slime.add(smiley3);
  
+		window.pack();
 		// 7. RUN THE PROGRAM and make sure you see three blue Smileys!
 	}
 }

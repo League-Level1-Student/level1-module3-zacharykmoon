@@ -36,7 +36,18 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 *   
 	 *     
 	 */
+	MediaPlace loader = new MediaPlace();
+JFrame bob = new JFrame();
+JPanel dan = new JPanel();
+public static void main(String[]args) {
+	
+	
+	
+	bob.add(dan);
+	bob.pack(dan);
+	
 
+}
 	BufferedImage backgroundImage;
 
 

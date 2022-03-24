@@ -9,18 +9,33 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.EventObject;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 /*   If you don't have javazoom.jar in your project, you can download it from here: http://bit.ly/javazoom
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
+import java.awt.geom.Area;
 
-public class Jukebox implements Runnable {
+public class Jukebox implements Runnable, ActionListener {
+JButton button1 = new JButton ();
+JButton button2 = new JButton ();
+JButton button3 = new JButton ();
+JButton pause = new JButton ();
+Song grasswalk = new Song ("Grasswalk IN-GAME.mp3");
+Song mario = new Song("Super Mario Bros.mp3");
+Song Minecraft = new Song("Minecraft.mp3");
+
 
     public void run() {
 
@@ -36,6 +51,29 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+    	
+    	JFrame frame = new JFrame();
+        JPanel song = new  JPanel();
+        frame.add(song);
+        frame.setVisible(true);
+        button1.setSize(100,100);
+        button2.setSize(100,100);
+        button3.setSize(100,100);
+        pause.setSize(100,100);
+        button1.setText("grasswalk Plants VS Zombies");
+        button2.setText("Super Mario Bros");
+        button3.setText("Minecraft");
+        pause.setText("Pause");
+        frame.setTitle("Video Game soundtracks");
+        song.add(button1);
+        song.add(button2);
+        song.add(button3);
+        song.add(pause);
+        button1.addActionListener(this);
+        button2.addActionListener(this);
+        button3.addActionListener(this);
+        frame.pack();
+    	
     }
     
     
@@ -44,6 +82,19 @@ public class Jukebox implements Runnable {
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		 
+		// TODO Auto-generated method stub
+		
+		JButton buttonclicked = (JButton) arg0.getSource();
+		if(arg0.getSource()== button1) {
+			grasswalk.play();
+		}
+		
 	}
 
 }

@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.EventObject;
 
+import javax.print.DocFlavor.STRING;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -27,14 +28,16 @@ import java.awt.event.ActionListener;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 import java.awt.geom.Area;
 
-public class Jukebox implements Runnable, ActionListener {
-JButton button1 = new JButton ();
-JButton button2 = new JButton ();
-JButton button3 = new JButton ();
+public class Jukebox<Song> implements Runnable, ActionListener {
+JButton button1 = new JButton();
+JButton button2 = new JButton();
+JButton button3 = new JButton();
+JButton button4 = new JButton();
 JButton pause = new JButton ();
-Song grasswalk = new Song ("Grasswalk IN-GAME.mp3");
-Song mario = new Song("Super Mario Bros.mp3");
-Song Minecraft = new Song("Minecraft.mp3");
+Song grasswalk = new Song("20. Grasswalk IN-GAME.mp3");
+Song Mario = new Song("01 - Super Mario Bros.mp3");
+Song Minecraft = new Song("08. Minecraft.mp3");
+Song Brainiac = new Song("14. Brainiac Maniac.mp3");
 
 
     public void run() {
@@ -59,19 +62,23 @@ Song Minecraft = new Song("Minecraft.mp3");
         button1.setSize(100,100);
         button2.setSize(100,100);
         button3.setSize(100,100);
+        button4.setSize(100,100);
         pause.setSize(100,100);
         button1.setText("grasswalk Plants VS Zombies");
         button2.setText("Super Mario Bros");
         button3.setText("Minecraft");
+        button4.setText("Brainiac Maniac");
         pause.setText("Pause");
         frame.setTitle("Video Game soundtracks");
         song.add(button1);
         song.add(button2);
         song.add(button3);
+        song.add(button4);
         song.add(pause);
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
+        button4.addActionListener(this);
         frame.pack();
     	
     }
@@ -93,11 +100,33 @@ Song Minecraft = new Song("Minecraft.mp3");
 		JButton buttonclicked = (JButton) arg0.getSource();
 		if(arg0.getSource()== button1) {
 			grasswalk.play();
+			Mario.stop();
+			Minecraft.stop();
+			Brainiac.stop();
 		}
-		
+	 
+		if(arg0.getSource()== button2) {
+			Mario.play();
+			grasswalk.stop();
+			Minecraft.stop();
+			Brainiac.stop();
+		}
+		 
+		if(arg0.getSource()== button3) {
+			Minecraft.play();
+			grasswalk.stop();
+			Mario.stop();
+			Brainiac.stop();
+		}
+		if(arg0.getSource()== button4) {
+			Brainiac.play();
+			Minecraft.stop();
+			grasswalk.stop();
+			Mario.stop();
+		}
+
 	}
 
-}
 
 class Song {
 
@@ -183,4 +212,4 @@ class Song {
 		}
 	}
 }
-
+}

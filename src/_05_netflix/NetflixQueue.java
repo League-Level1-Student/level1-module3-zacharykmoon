@@ -24,10 +24,10 @@ public class NetflixQueue {
 	/**
 	 * adds a movie to the Netflix Queue
 	 * 
-	 * @param movie
+	 * @param harryPotter
 	 */
-	public void addMovie(Movie movie) {
-		movies.add(movie);
+	public void addMovie(Movie harryPotter) {
+		movies.add(harryPotter);
 	}
 
 	/**

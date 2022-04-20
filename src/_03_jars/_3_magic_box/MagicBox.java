@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.print.attribute.standard.Media;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -36,15 +37,14 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	 *   
 	 *     
 	 */
-	MediaPlace loader = new MediaPlace();
+	MediaPalace loader = new MediaPalace();
 JFrame bob = new JFrame();
-JPanel dan = new JPanel();
+static JPanel dan = new JPanel();
 public static void main(String[]args) {
 	
 	
 	
-	bob.add(dan);
-	bob.pack(dan);
+	 
 	
 
 }

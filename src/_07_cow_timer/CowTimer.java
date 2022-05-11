@@ -10,6 +10,7 @@ import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
 
 public class CowTimer {
 
@@ -17,6 +18,11 @@ public class CowTimer {
 	 * 1. Make a constructor for the CowTimer class that initializes the minutes
 	 * variable
 	 */
+	 
+	CowTimer(int minutes){
+		this.minutes = minutes;
+		
+	}
 
 	/* 4. Complete the main method of the CowTimerRunner class */
 
@@ -38,7 +44,11 @@ public class CowTimer {
 		 * You can use the .wav file in the default package, or you can download one
 		 * from freesound.org, then drag it intothe default package.
 		 */
-
+for(int time = minutes; time >0; time--) {
+	System.out.println(time+ "minutes");
+	Thread.sleep(1000);
+}
+JOptionPane.showMessageDialog(null, "Moo       ");
 	}
 
 	public void playSound(final String file) {
